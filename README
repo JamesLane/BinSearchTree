@@ -1,0 +1,21 @@
+BinSearchTree v20130422
+By James Lane, Novelty Hill Software, Inc.
+Contact: BinSearchTree (at-symbol) NoveltyHillSoftware (period-symbol) commercial
+
+If this library is useful to you, please send an acknowledgement email to the address above. Acknowledgement emails make further developement more likely.
+
+BinSearchTree is a basic C++ binary search tree template library. Functionally similar to the STL map<> library, but not balanced, making it a useful base for various kinds of balanced tree classes.
+
+Originally written as an exercise.
+
+Supports breadth-first, in-order, post-order, and pre-order tree traversals, with "Fast" and "Small" versions of each.
+The "-Fast" sequences create cached arrays of pointers to nodes, using O(N) data and O(N log N) or O(N) time to create the sequences, and O(1) time to increment or decrement within the sequences.
+The "-Small" (e.g. "eInOrderSmall") traversal orders use O(1) data, but O(N log N) or O(N^2) time to increment or decrement.
+The default "eInOrderSmall" is equivalent to the STL map<> iterator sequence.
+
+C++11 "ranged for" loops are based on the standard begin() and end() functions. A function (SetDefaultOrder()) is provided to allow "ranged for" to work with any of the traversal orders.
+
+Current state as of 2013.04.22:
+    Known to compile and correctly execute its tests under GNU gcc/g++ 4.7.2.
+    Partially tested (see the "Test*.cpp" files).
+    Partly compatible with the STL map<> API.

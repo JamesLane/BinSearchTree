@@ -1,0 +1,51 @@
+Files and classes in BinSearchTree v20130422
+
+Primary API files:
+    BinSearchTree.hpp
+        Contains tBinSearchTree, the primary tree template class.
+        Derived from tBinSearchTreeBase and tBinSearchNode.
+
+    BinSearchTreeIter.hpp
+        Contains tIterator, a standard bidirectional iterator template class.
+
+Internal files:
+    BinSearchNode.hpp
+        Contains tBinSearchNode, a node class template.
+        Derived from tBinSearchNodeBase.
+        (There is no corresponding "BinSearchNode.cpp".)
+
+    BinSearchNodeBase.cpp
+        Contains support code related to tBinSearchNodeBase:
+            Small sequence functions to find the first or last node in a tree
+            Small sequence functions to increment / decrement to the next / previous node in a tree.
+
+    BinSearchNodeBase.hpp
+        Contains tBinSearchNodeBase, a non-template node base class.
+        Basic node data (pointers to the parent and child nodes).
+
+    BinSearchTreeBase.cpp
+        Contains support code for tBinSearchTreeBase:
+            Functions to create the sequences used by the fast iterator, and
+            Fast sequence functions to increment/decrement to the next/previous node in the tree.
+
+    BinSearchTreeBase.hpp
+        Contains tBinSearchTreeBase, a non-template tree base class.
+        Most of the Tree data is here, along with the Tree maintenance functions that don't depend on the types of the Key or Value.
+
+Test files:
+    Entry.cpp
+    Entry.hpp
+    Main.cpp
+    Main.hpp
+    MakeTree.cpp
+    PassedTests.log.txt
+    TestBeginAndEnd.cpp
+    TestIterDeref.cpp
+    TestIterIncAndDec.cpp
+    TestNodeNextAndPrev.cpp
+    TestOldStyleIter.cpp
+    TestRangedFor.cpp
+    TestTreeFind.cpp
+    TestTreeMaxAndMin.cpp
+    TreeTest.cpp
+    TreeTest.hpp
